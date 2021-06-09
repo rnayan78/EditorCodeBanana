@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CodeBanana</title>
+    <link rel="stylesheet" href="style.css">
+    <script rel="text/javascript" src="app.js"></script>
+    
+  </head>
+  <body>
+    <div class="code-area">
+      <textarea  id="htmlCode" placeholder="HTML Code" 
+      oninput="showPreview()"></textarea>
+      <textarea  id="cssCode" placeholder="CSS Code" 
+      oninput="showPreview()"></textarea>
+      <textarea  id="jsCode" placeholder="JavaScript Code" 
+      oninput="showPreview()"></textarea>
+    </div>
+    <div class="preview-area">
+      <iframe id="preview-window"></iframe>
+    </div>
+    
+  </body>
+</html>
