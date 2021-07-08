@@ -18,6 +18,7 @@ var codenum = 1;
 var codeTypes = [htmlCode, cssCode, jsCode];
 var codeTypesHeading = ["HTML CODE", "CSS CODE", "JS CODE"];
 var codeTypeIndex = 0;
+var isStarted = false;
 function compCode() {
   var currentCodeType = codeTypes[codeTypeIndex];
   if (codenum == currentCodeType.length + 1) {
@@ -59,7 +60,11 @@ function compCode() {
     }
   }
 }
-compCode();
+document.querySelector("#start-coding").addEventListener("click", function () {
+  document.querySelector("#start-coding").remove();
+  isStarted = true;
+  compCode();
+});
 
 function replacer(key, value) {
   return value.replace(/\n/g, "").replace(/ /g, "");
@@ -68,7 +73,7 @@ function replacer(key, value) {
 document
   .querySelector("textarea#htmlCode")
   .addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 && isStarted) {
       event.preventDefault();
       var userCodeline = document.querySelector("textarea#htmlCode").value;
       var compCodeline = document.querySelector(
@@ -99,7 +104,7 @@ document
 document
   .querySelector("textarea#cssCode")
   .addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 && isStarted) {
       event.preventDefault();
       var userCodeline = document.querySelector("textarea#cssCode").value;
       var compCodeline = document.querySelector(
@@ -130,7 +135,7 @@ document
 document
   .querySelector("textarea#jsCode")
   .addEventListener("keyup", function (event) {
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 && isStarted) {
       event.preventDefault();
       var userCodeline = document.querySelector("textarea#jsCode").value;
       var compCodeline = document.querySelector(

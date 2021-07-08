@@ -22,8 +22,27 @@ p {
   margin-bottom: 1rem;
   text-decoration: underline;
 }
-/* #start-coding {
-} */
+#start-coding {
+  position: relative;
+  width: 25%;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  border: none;
+  padding: 0.8rem;
+  border-radius: 5px;
+  background-color: #444;
+  color: white;
+  font-size: 1rem;
+}
+
+#start-coding:hover {
+  border: solid #444;
+  background-color: white;
+  color: #444;
+  transition: 0.3s;
+  cursor: pointer;
+}
 .code-area {
   display: flex;
 
