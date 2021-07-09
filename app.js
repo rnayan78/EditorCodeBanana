@@ -23,6 +23,9 @@ function compCode() {
   var currentCodeType = codeTypes[codeTypeIndex];
   if (codenum == currentCodeType.length + 1) {
     if (codeTypeIndex > 2) {
+      document.querySelector("div.code-instruction-area").remove();
+      document.querySelector("#start-coding").remove();
+      document.querySelector("#code-type").remove();
       var finish = document.createElement("H3");
       finish.innerHTML = "Congratulations!! You have made a tic tac toe game.";
       document.querySelector("div.code-instruction-area").appendChild(finish);
