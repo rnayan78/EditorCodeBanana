@@ -1,105 +1,484 @@
 var htmlCode = [
-  { code: "<body>" },
-  { code: '<div class="text-center" id="box">' },
-  { code: "  <header>" },
-  { code: "    <h1>Play Tic Tac Toe</h1>" },
-  { code: '    <div id="play">' },
-  { code: "      <button>Play</button>" },
-  { code: "    </div>" },
-  { code: "  </header>" },
-  { code: '<div id="message"></div>' },
-  { code: '  <ul id="gameBoard">' },
-  { code: '    <li class="tic" id="0">#</li>' },
-  { code: '    <li class="tic" id="1">#</li>' },
-  { code: '    <li class="tic" id="2">#</li>' },
-  { code: '    <li class="tic" id="3">#</li>' },
-  { code: '    <li class="tic" id="4">#</li>' },
-  { code: '    <li class="tic" id="5">#</li>' },
-  { code: '    <li class="tic" id="6">#</li>' },
-  { code: '    <li class="tic" id="7">#</li>' },
-  { code: '    <li class="tic" id="8">#</li>' },
-  { code: "  </ul>" },
-  { code: '  <div class="clearfix"></div>' },
-  { code: "<footer>" },
-  { code: '  <button id="reset">Reset</button>' },
-  { code: "</footer>" },
-  { code: "</div>" },
-  { code: "</body>" },
+  {
+    code: "<body>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body",
+  },
+  {
+    code: "<div",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+  },
+  {
+    code: '  class="text-center"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: '  id="box">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "    <header>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header",
+  },
+  {
+    code: "      <h1>Play Tic Tac Toe</h1>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements",
+  },
+  {
+    code: "      <div",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+  },
+  {
+    code: '      id="play">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "        <button>Play</button>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button",
+  },
+  {
+    code: "      </div>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+  },
+  {
+    code: "    </header>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header",
+  },
+  {
+    code: "    <div",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+  },
+  {
+    code: '      id="message">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "    </div>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+  },
+  {
+    code: "    <ul",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul",
+  },
+  {
+    code: '      id="gameBoard">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: '        id="0">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "        #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: '        id="1">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "      #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: '        id="2">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "      #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        id="3">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "      #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: '        id="4">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "      #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        id="5">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "      #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: '        id="6">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "      #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: '        id="7">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "        #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "      <li",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: '        class="tic"',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: '        id="8">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "        #</li>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "    </ul>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul",
+  },
+  {
+    code: "    <div",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+  },
+  {
+    code: '      class="clearfix">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes",
+  },
+  {
+    code: "    </div>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+  },
+  {
+    code: "    <footer>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer",
+  },
+  {
+    code: "      <button",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button",
+  },
+  {
+    code: '      id="reset">',
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/id",
+  },
+  {
+    code: "      Reset</button>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button",
+  },
+  {
+    code: "    </footer>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer",
+  },
+  {
+    code: "</div>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div",
+  },
+  {
+    code: "</body>",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body",
+  },
 ];
 
 var cssCode = [
-  { code: "body{" },
-  { code: "  background: #212121;" },
-  { code: "  color: #666;" },
+  {
+    code: "body{",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body",
+  },
+  {
+    code: "  background: #212121;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+  },
+  {
+    code: "  color: #666;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+  },
   { code: "}" },
-  { code: "h1{" },
-  { code: "  text-align: center;" },
-  { code: "  color: #fff;" },
+  {
+    code: "h1{",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements",
+  },
+  {
+    code: "  text-align: center;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align",
+  },
+  {
+    code: "  color: #fff;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+  },
   { code: "}" },
   { code: ".clearfix{" },
-  { code: "  clear: both;" },
+  {
+    code: "  clear: both;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/clear",
+  },
   { code: "}" },
   { code: "#box{" },
-  { code: "  width: 350px;" },
-  { code: "  overflow: auto;" },
-  { code: "  margin: 40px auto;" },
-  { code: "  background: #666;" },
-  { code: "  padding-bottom: 40px;" },
-  { code: "  border-radius: 10px;" },
+  {
+    code: "  width: 350px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/width",
+  },
+  {
+    code: "  overflow: auto;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/overflow",
+  },
+  {
+    code: "  margin: 40px auto;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/margin",
+  },
+  {
+    code: "  background: #666;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+  },
+  {
+    code: "  padding-bottom: 40px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-bottom",
+  },
+  {
+    code: "  border-radius: 10px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius",
+  },
   { code: "}" },
   { code: "#play {" },
-  { code: "  text-align: center;" },
+  {
+    code: "  text-align: center;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align",
+  },
   { code: "}" },
-  { code: "#play button {" },
-  { code: "  border: none;" },
-  { code: "  background: #444;" },
-  { code: "  color: #fff;" },
-  { code: "  width: 40%;" },
-  { code: "  padding: 10px;" },
-  { code: "  border-radius: 5px;" },
+  {
+    code: "#play button {",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button",
+  },
+  {
+    code: "  border: none;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/border",
+  },
+  {
+    code: "  background: #444;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+  },
+  {
+    code: "  color: #fff;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+  },
+  {
+    code: "  width: 40%;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/width",
+  },
+  {
+    code: "  padding: 10px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/padding",
+  },
+  {
+    code: "  border-radius: 5px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius",
+  },
   { code: "}" },
-  { code: "#play button:hover {" },
-  { code: "  cursor: pointer;" },
-  { code: "  background: #000;" },
+  {
+    code: "#play button:hover {",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/:hover",
+  },
+  {
+    code: "  cursor: pointer;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/cursor",
+  },
+  {
+    code: "  background: #000;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+  },
   { code: "}" },
   { code: "#message{" },
-  { code: "  background: #333;" },
-  { code: "  color: #fff;" },
+  {
+    code: "  background: #333;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+  },
+  {
+    code: "  color: #fff;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+  },
   { code: "}" },
-  { code: "#gameBoard li{" },
-  { code: "  float: left;" },
-  { code: "  margin: 10px;" },
-  { code: "  height: 70px;" },
-  { code: "  width: 70px;" },
-  { code: "  font-size: 50px;" },
-  { code: "  background: #333;" },
-  { code: "  color: #ccc;" },
-  { code: "  list-style: none;" },
-  { code: "  text-align: center;" },
-  { code: "  border-radius: 5px;" },
+  {
+    code: "#gameBoard li{",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li",
+  },
+  {
+    code: "  float: left;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/float",
+  },
+  {
+    code: "  margin: 10px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/margin",
+  },
+  {
+    code: "  height: 70px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/height",
+  },
+  {
+    code: "  width: 70px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/width",
+  },
+  {
+    code: "  font-size: 50px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/font-size",
+  },
+  {
+    code: "  background: #333;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+  },
+  {
+    code: "  color: #ccc;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+  },
+  {
+    code: "  list-style: none;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/list-style",
+  },
+  {
+    code: "  text-align: center;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align",
+  },
+  {
+    code: "  border-radius: 5px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius",
+  },
   { code: "}" },
-  { code: "#gameBoard li:hover, #reset:hover{" },
-  { code: "  cursor: pointer;" },
-  { code: "  background: #000;" },
+  {
+    code: "#gameBoard li:hover, #reset:hover{",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/:hover",
+  },
+  {
+    code: "  cursor: pointer;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/cursor",
+  },
+  {
+    code: "  background: #000;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+  },
   { code: "}" },
   { code: "#reset{" },
-  { code: "  border: 0;" },
-  { code: "  background: #444;" },
-  { code: "  color: #fff;" },
-  { code: "  width: 70%;" },
-  { code: "  padding: 15px;" },
-  { code: "  border-radius: 5px;" },
+  {
+    code: "  border: 0;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/border",
+  },
+  {
+    code: "  background: #444;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/background",
+  },
+  {
+    code: "  color: #fff;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+  },
+  {
+    code: "  width: 70%;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/width",
+  },
+  {
+    code: "  padding: 15px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/padding",
+  },
+  {
+    code: "  border-radius: 5px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius",
+  },
   { code: "}" },
   { code: ".o{" },
-  { code: "  color: green !important;" },
+  {
+    code: "  color: green !important;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+  },
   { code: "}" },
   { code: ".x{" },
-  { code: "  color: red !important;" },
+  {
+    code: "  color: red !important;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value",
+  },
   { code: "}" },
   { code: "footer{" },
-  { code: "  display: block;" },
-  { code: "  text-align: center;" },
-  { code: "  padding-top: 20px;" },
+  {
+    code: "  display: block;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/display",
+  },
+  {
+    code: "  text-align: center;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align",
+  },
+  {
+    code: "  padding-top: 20px;",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS/padding-top",
+  },
   { code: "}" },
 ];
 

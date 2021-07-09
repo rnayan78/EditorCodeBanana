@@ -57,6 +57,14 @@ function compCode() {
       var p = document.createElement("P");
       p.textContent = currentCodeType[i].code;
       document.querySelector("div.code-instruction-area").appendChild(p);
+      if (currentCodeType[i].link) {
+        document.querySelector(
+          "div.code-instruction-area"
+        ).lastChild.innerHTML +=
+          "<a id='Qicon' href=" +
+          currentCodeType[i].link +
+          " target='_blank'><img src='question-mark.png' width='16' height='16'></a>";
+      }
     }
   }
 }
@@ -94,8 +102,6 @@ document
             "div.code-instruction-area"
           ).lastChild;
           lastCode.classList.add("wrong");
-          lastCode.innerHTML +=
-            "<a id='Qicon' href='https://www.javatpoint.com/html-tutorial' target='_blank'><img src='question-mark.png' width='16' height='16'></a>";
         }
       }
     }
@@ -125,8 +131,6 @@ document
             "div.code-instruction-area"
           ).lastChild;
           lastCode.classList.add("wrong");
-          lastCode.innerHTML +=
-            "<a id='Qicon' href='https://www.javatpoint.com/css-tutorial' target='_blank'><img src='question-mark.png' width='16' height='16'></a>";
         }
       }
     }
