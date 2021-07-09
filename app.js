@@ -19,6 +19,31 @@ var codeTypes = [htmlCode, cssCode, jsCode];
 var codeTypesHeading = ["HTML CODE", "CSS CODE", "JS CODE"];
 var codeTypeIndex = 0;
 var isStarted = false;
+
+document
+  .querySelector("#code-type button")
+  .addEventListener("click", function () {
+    var themeButton = document.querySelector("#code-type button");
+    console.log(themeButton.classList.contains("theme-d"));
+    if (themeButton.classList.contains("theme-d")) {
+      themeButton.className = "theme-l";
+      themeButton.textContent = "Light Mode";
+      document.querySelector(".code-instruction").classList.add("dark");
+      document.querySelector("#htmlCode").classList.add("dark");
+      document.querySelector("#cssCode").classList.add("dark");
+      document.querySelector("#jsCode").classList.add("dark");
+      document.querySelector("#preview-head").classList.add("dark");
+    } else {
+      themeButton.className = "theme-d";
+      themeButton.textContent = "Dark Mode";
+      document.querySelector(".code-instruction").classList.remove("dark");
+      document.querySelector("#htmlCode").classList.remove("dark");
+      document.querySelector("#cssCode").classList.remove("dark");
+      document.querySelector("#jsCode").classList.remove("dark");
+      document.querySelector("#preview-head").classList.remove("dark");
+    }
+  });
+
 function compCode() {
   var currentCodeType = codeTypes[codeTypeIndex];
   if (codenum == currentCodeType.length + 1) {

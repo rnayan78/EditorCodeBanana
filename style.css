@@ -13,40 +13,79 @@ p {
 }
 .code-instruction {
   display: flex;
-
+  /* background-color: #282828;
+  color: white; */
   flex-direction: column;
   width: 50%;
   border-right: 1px solid #555;
+  border: solid thin;
 }
 #code-type {
   text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   margin-bottom: 1rem;
+  padding-top: 1rem;
   text-decoration: underline;
 }
-#start-coding {
-  position: relative;
-  width: 25%;
-  left: 50%;
-  top: 40%;
-  transform: translate(-50%, -50%);
+#htmlCode {
+  /* background-color: #282828; */
+  /* color: white; */
+  border: none;
+  border-top: solid thin;
+  border-bottom: solid thin;
+}
+#cssCode {
+  /* background-color: #282828; */
+  /* color: white; */
+  border: none;
+  border-bottom: solid thin;
+}
+#jsCode {
+  /* background-color: #282828; */
+  /* color: white; */
+  border: none;
+}
+#preview-head {
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: solid thick;
+  border-top: solid thin;
+  /* background-color: #282828;
+  color: white; */
+}
+#lets-go {
   border: none;
   padding: 0.8rem;
   border-radius: 5px;
+  position: relative;
+  width: 25%;
+
   background-color: #444;
   color: white;
   font-size: 1rem;
 }
 
-#start-coding:hover {
+#lets-go:hover {
   border: solid #444;
   background-color: white;
   color: #444;
   transition: 0.3s;
   cursor: pointer;
 }
+#start-coding {
+  position: relative;
+
+  text-align: center;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+#imp-msg {
+  color: red;
+}
 .code-area {
   display: flex;
-
   flex-direction: column;
   width: 50%;
   border-right: 1px solid #555;
@@ -60,7 +99,10 @@ p {
   padding: 10px;
 }
 .preview-area {
+  display: flex;
+  flex-direction: column;
   width: 50%;
+  max-height: 100%;
 }
 .preview-area iframe {
   width: 100%;
@@ -100,4 +142,42 @@ p {
   letter-spacing: 2px;
   top: 50%;
   transform: translate(0, -50%);
+}
+.theme-l {
+  position: relative;
+  border: solid thin white;
+  color: white;
+  background-color: #282828;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  bottom: 10px;
+  left: 10%;
+}
+.theme-l:hover {
+  border: solid thin white;
+  color: #282828;
+  background-color: white;
+  cursor: pointer;
+}
+.theme-d {
+  position: relative;
+  border: solid thin #282828;
+  color: #282828;
+  background-color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  bottom: 10px;
+  left: 10%;
+}
+.theme-d:hover {
+  border: solid thin #282828;
+  color: white;
+  background-color: #282828;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: #282828;
+  color: white;
 }
