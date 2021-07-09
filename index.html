@@ -7,9 +7,9 @@
     <script rel="text/javascript" src="app.js"></script>
   </head>
   <body>
-    <div class="code-instruction">
+    <div class="code-instruction dark">
       <h1 id="code-type">
-        HTML CODE <button class="theme-d">Dark Mode</button>
+        HTML CODE <button class="theme-l">Light Mode</button>
       </h1>
       <div id="start-coding">
         <button id="lets-go">Let's Go</button>
@@ -45,22 +45,25 @@
     >
       <textarea
         id="htmlCode"
+        class="dark"
         placeholder="HTML Code"
         oninput="showPreview()"
       ></textarea>
       <textarea
         id="cssCode"
+        class="dark"
         placeholder="CSS Code"
         oninput="showPreview()"
       ></textarea>
       <textarea
         id="jsCode"
+        class="dark"
         placeholder="JavaScript Code"
         oninput="showPreview()"
       ></textarea>
     </div>
     <div class="preview-area">
-      <h2 id="preview-head">Playground</h2>
+      <h2 id="preview-head" class="dark">Playground</h2>
       <iframe id="preview-window"></iframe>
     </div>
 
